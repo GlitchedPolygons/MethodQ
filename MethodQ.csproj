@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Glitched Polygons</Authors>
+    <Company>Glitched Polygons</Company>
+    <Product>GlitchedPolygons.Services.MethodQ</Product>
+    <PackageId>GlitchedPolygons.Services.MethodQ</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RootNamespace>GlitchedPolygons.Services.MethodQ</RootNamespace>
+    <AssemblyName>GlitchedPolygons.Services.MethodQ</AssemblyName>
+    <PackageProjectUrl>https://github.com/GlitchedPolygons/MethodQ</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/GlitchedPolygons/MethodQ</RepositoryUrl>
+    <PackageIconUrl>https://www.glitchedpolygons.com/images/projects/software/methodq/methodq-icon-512x512.png</PackageIconUrl>
+    <PackageTags>method queue c# job method call scheduling schedule calls scheduler methodq function invoke invocation invocator time management timer timers event based</PackageTags>
   </PropertyGroup>
 
 </Project>
