@@ -2,7 +2,7 @@
 using System.Timers;
 using System.Collections.Generic;
 
-namespace MethodQ
+namespace GlitchedPolygons.Services.MethodQ
 {
     public class MethodQ : IMethodQ
     {

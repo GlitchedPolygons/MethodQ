@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MethodQ
+namespace GlitchedPolygons.Services.MethodQ
 {
     /// <summary>
     /// Service interface for scheduling method calls using a method queue.
