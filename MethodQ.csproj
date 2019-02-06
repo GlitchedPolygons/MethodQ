@@ -13,6 +13,7 @@
     <RepositoryUrl>https://github.com/GlitchedPolygons/MethodQ</RepositoryUrl>
     <PackageIconUrl>https://www.glitchedpolygons.com/images/projects/software/methodq/methodq-icon-512x512.png</PackageIconUrl>
     <PackageTags>method queue c# job method call scheduling schedule calls scheduler methodq function invoke invocation invocator time management timer timers event based</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
