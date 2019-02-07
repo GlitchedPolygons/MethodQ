@@ -1,10 +1,9 @@
 # MethodQ
-The extremely simple and light solution to time management problems in 
-generic C# projects (for when [Quartz.NET](https://github.com/quartznet/quartznet) is just overkill). You can queue 
-any method call ([System.Action](https://docs.microsoft.com/en-us/dotnet/api/system.action?view=netframework-4.7.2)) for invocation in the future (repeating 
+## The extremely simple and light solution to time management problems in generic C# projects (for when [Quartz.NET](https://github.com/quartznet/quartznet) is just overkill). 
+You can queue any method call ([System.Action](https://docs.microsoft.com/en-us/dotnet/api/system.action?view=netframework-4.7.2)) for invocation in the future (repeating 
 or non-repeating). 
 
-The only requirement is support for the [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
+* The only requirement is support for the [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 
 ---
 
