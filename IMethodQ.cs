@@ -13,7 +13,7 @@ namespace GlitchedPolygons.Services.MethodQ
         /// <param name="action">The <see cref="Action"/> to schedule.</param>
         /// <param name="executionUtc">The <see cref="DateTime"/> in UTC of when the <paramref name="action"/> should be invoked.</param>
         /// <returns>The scheduled method call's unique identifier (needed for cancellation).</returns>
-        int Schedule(Action action, DateTime executionUtc);
+        ulong Schedule(Action action, DateTime executionUtc);
 
         /// <summary>
         /// Schedules the specified <see cref="Action"/> to be executed every <paramref name="interval"/> until manual cancellation.
@@ -21,13 +21,13 @@ namespace GlitchedPolygons.Services.MethodQ
         /// <param name="action">The <see cref="Action"/> to schedule.</param>
         /// <param name="interval">Repetition interval <see cref="TimeSpan"/>.</param>
         /// <returns>The scheduled method call's unique identifier (needed for cancellation).</returns>
-        int Schedule(Action action, TimeSpan interval);
+        ulong Schedule(Action action, TimeSpan interval);
 
         /// <summary>
         /// Cancels the specified method call (removes it from the list of scheduled calls). Irreversible!
         /// </summary>
         /// <param name="id">The scheduled action's identifier.</param>
         /// <returns>Whether the cancellation was successful or not (e.g. can't double-cancel or cancel an inexistent call).</returns>
-        bool Cancel(int id);
+        bool Cancel(ulong id);
     }
 }
