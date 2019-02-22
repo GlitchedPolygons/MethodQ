@@ -6,7 +6,7 @@ namespace GlitchedPolygons.Services.MethodQ
 {
     public class MethodQ : IMethodQ
     {
-        private ulong lastId = 0;
+        private ulong nextId = 0;
         private readonly Dictionary<ulong, Timer> timers = new Dictionary<ulong, Timer>(16);
 
         public ulong Schedule(Action action, DateTime executionUtc)
@@ -24,7 +24,7 @@ namespace GlitchedPolygons.Services.MethodQ
             if (deltaTime.TotalMilliseconds >= Int32.MaxValue)
                 throw new ArgumentException($"{nameof(MethodQ)}::{nameof(Schedule)}: The provided {nameof(executionUtc)} {nameof(DateTime)} lies more than {{Int32.MaxValue}} milliseconds in the future, which is not allowed and not a good idea anyway (use a scheduled task for anything >3 days in the future).");
 
-            ulong id = lastId++;
+            ulong id = nextId++;
             var timer = new Timer(deltaTime.TotalMilliseconds) { AutoReset = false };
             timer.Elapsed += (_, __) =>
             {
@@ -45,7 +45,7 @@ namespace GlitchedPolygons.Services.MethodQ
             if (interval.TotalMilliseconds >= Int32.MaxValue)
                 throw new ArgumentException($"{nameof(MethodQ)}::{nameof(Schedule)}: The provided {nameof(interval)} {nameof(TimeSpan)} is longer than {{Int32.MaxValue}} milliseconds, which is not allowed and not a good idea anyway (use a scheduled task for anything >3 days in the future).");
 
-            ulong id = lastId++;
+            ulong id = nextId++;
             var timer = new Timer(interval.TotalMilliseconds) { AutoReset = true };
             timer.Elapsed += (_, __) => action.Invoke();
             timer.Start();
