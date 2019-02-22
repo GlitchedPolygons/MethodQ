@@ -1,4 +1,5 @@
 # MethodQ
+[![NuGet](https://img.shields.io/nuget/v/GlitchedPolygons.Services.MethodQ.svg)](https://www.nuget.org/packages/GlitchedPolygons.Services.MethodQ)
 ## The extremely simple and light solution to time management problems in generic C# projects (for when [Quartz.NET](https://github.com/quartznet/quartznet) is just overkill). 
 You can queue any method call ([System.Action](https://docs.microsoft.com/en-us/dotnet/api/system.action?view=netframework-4.7.2)) for invocation in the future (repeating 
 or non-repeating). 
