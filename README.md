@@ -9,3 +9,5 @@ or non-repeating).
 ---
 
 Note that when scheduling method calls using the `IMethodQ.Schedule(Action, DateTime)` overload, the passed DateTime should be in UTC and **not exceed 24 days**, as that would throw an invalid timer argument exception (due to [System.Timers](https://docs.microsoft.com/en-us/dotnet/api/system.timers?view=netframework-4.7.2) using milliseconds (ms) as interval unit, [which are limited to Int32.MaxValue](https://stackoverflow.com/questions/1624789/maximum-timer-interval)).
+
+Also worth mentioning is that this system makes use of `System.Timers`, which [according to the .NET documentation](https://docs.microsoft.com/en-us/dotnet/api/system.timers.timer?redirectedfrom=MSDN&view=netframework-4.7.2) will not invoke your passed callbacks from the calling thread but from the thread pool instead.
