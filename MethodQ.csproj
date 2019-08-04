@@ -4,8 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Glitched Polygons</Authors>
     <Company>Glitched Polygons</Company>
+    <Title>GlitchedPolygons.Services.MethodQ</Title>
     <Product>GlitchedPolygons.Services.MethodQ</Product>
     <PackageId>GlitchedPolygons.Services.MethodQ</PackageId>
+    <Version>1.0.4</Version>
+    <PackageVersion>1.0.4</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>GlitchedPolygons.Services.MethodQ</RootNamespace>
     <AssemblyName>GlitchedPolygons.Services.MethodQ</AssemblyName>
@@ -13,8 +16,8 @@
     <RepositoryUrl>https://github.com/GlitchedPolygons/MethodQ</RepositoryUrl>
     <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/NugetIcons/8fc395a8b2ae595a2816a690669490cf9a4764b9/methodq.png</PackageIconUrl>
     <PackageTags>method queue c# job method call scheduling schedule calls scheduler methodq function invoke invocation invocator time management timer timers event based</PackageTags>
-    <Version>1.0.3</Version>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.0\GlitchedPolygons.Services.MethodQ.xml</DocumentationFile>

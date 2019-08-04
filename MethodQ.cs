@@ -4,11 +4,20 @@ using System.Collections.Generic;
 
 namespace GlitchedPolygons.Services.MethodQ
 {
+    /// <summary>
+    /// Schedule your method calls easily and add the fourth dimension to your projects. Time is the most precious resource in life.
+    /// </summary>
     public class MethodQ : IMethodQ
     {
         private ulong nextId = 0;
         private readonly Dictionary<ulong, Timer> timers = new Dictionary<ulong, Timer>(16);
 
+        /// <summary>
+        /// Schedules the specified action to be executed ONCE at the specified <paramref name="executionUtc"/> <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="action">The <see cref="Action"/> to schedule.</param>
+        /// <param name="executionUtc">The <see cref="DateTime"/> in UTC of when the <paramref name="action"/> should be invoked.</param>
+        /// <returns>The scheduled method call's unique identifier (needed for cancellation).</returns>
         public ulong Schedule(Action action, DateTime executionUtc)
         {
             if (action is null)
@@ -37,6 +46,12 @@ namespace GlitchedPolygons.Services.MethodQ
             return id;
         }
 
+        /// <summary>
+        /// Schedules the specified <see cref="Action"/> to be executed every <paramref name="interval"/> until manual cancellation.
+        /// </summary>
+        /// <param name="action">The <see cref="Action"/> to schedule.</param>
+        /// <param name="interval">Repetition interval <see cref="TimeSpan"/>.</param>
+        /// <returns>The scheduled method call's unique identifier (needed for cancellation).</returns>
         public ulong Schedule(Action action, TimeSpan interval)
         {
             if (action is null)
@@ -53,6 +68,11 @@ namespace GlitchedPolygons.Services.MethodQ
             return id;
         }
 
+        /// <summary>
+        /// Cancels the specified method call (removes it from the list of scheduled calls). Irreversible!
+        /// </summary>
+        /// <param name="id">The scheduled action's identifier.</param>
+        /// <returns>Whether the cancellation was successful or not (e.g. can't double-cancel or cancel an inexistent call).</returns>
         public bool Cancel(ulong id)
         {
             if (!timers.TryGetValue(id, out var timer))
