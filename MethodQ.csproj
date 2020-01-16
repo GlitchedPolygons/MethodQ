@@ -14,7 +14,6 @@
     <AssemblyName>GlitchedPolygons.Services.MethodQ</AssemblyName>
     <PackageProjectUrl>https://github.com/GlitchedPolygons/MethodQ</PackageProjectUrl>
     <RepositoryUrl>https://github.com/GlitchedPolygons/MethodQ</RepositoryUrl>
-    <PackageIconUrl>https://media.githubusercontent.com/media/GlitchedPolygons/NugetIcons/8fc395a8b2ae595a2816a690669490cf9a4764b9/methodq.png</PackageIconUrl>
     <PackageTags>method queue c# job method call scheduling schedule calls scheduler methodq function invoke invocation invocator time management timer timers event based</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -26,4 +25,13 @@
     <DocumentationFile>bin\Release\netstandard2.0\GlitchedPolygons.Services.MethodQ.xml</DocumentationFile>
   </PropertyGroup>
   
+  
+<PropertyGroup>
+  <PackageIcon>icon.png</PackageIcon>
+</PropertyGroup>
+
+<ItemGroup>
+  <None Include="icon.png" Pack="true" PackagePath="\"/>
+</ItemGroup>
+
 </Project>
